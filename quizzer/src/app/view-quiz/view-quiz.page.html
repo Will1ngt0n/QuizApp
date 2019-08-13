@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title style="text-align: center;">Quiz</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+        <ion-list *ngFor="let x of questionSet" style="margin: 0;" (ionChange)="setScore($event, x.Question)">
+        <ion-card style="padding: 10px; margin: 0 10px;">
+            <h3 style="text-align:center;">{{x.Question}}</h3>
+            <ion-list>
+              <ion-radio-group>
+                <ion-item *ngFor="let a of x.Answer">
+                  <ion-label>{{a}}</ion-label>
+                  <ion-radio slot="start" value="{{a}}"></ion-radio>
+                </ion-item>
+              </ion-radio-group>
+            </ion-list>
+        </ion-card>
+      </ion-list>
+      <div style="text-align: center">
+        <ion-button style="margin:auto;" (click)="submitScores()">Submit</ion-button>
+      </div>
+      
+</ion-content>
+<ion-footer>
+  <ion-button expand="full" [routerLink]="['/login']">Logout</ion-button>
+</ion-footer>

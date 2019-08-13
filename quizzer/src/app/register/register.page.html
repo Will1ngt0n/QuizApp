@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar style="text-align: center" color="primary">
+    <ion-title>Register</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card style="padding: 20px 50px; ">
+    <ion-item>
+      <ion-label position="floating">Name: </ion-label>
+      <ion-input [(ngModel)]="name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Age: </ion-label>
+      <ion-input [(ngModel)]="age"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Gender: </ion-label>
+      <ion-input [(ngModel)]="gender"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Email: </ion-label>
+      <ion-input [(ngModel)]="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Password: </ion-label>
+      <ion-input [(ngModel)]="password"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Confirm password: </ion-label>
+      <ion-input [(ngModel)]="confirmPassword"></ion-input>
+    </ion-item><br/><br/>
+    <ion-button  style="display: block; width: 200px; margin: auto;" (click)="addUser();">Register</ion-button><br/>
+    <a  style="display: block; width: 120px; margin: auto;"  [routerLink]="['/login']">I have an account</a>
+  </ion-card>
+</ion-content>
+

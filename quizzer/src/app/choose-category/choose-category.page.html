@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title style="text-align: center;">Choose Category</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card style="vertical-align: center;">
+    
+      <ion-list  *ngFor="let x of categories">
+        <ion-button style="width: 50%; margin: auto; display: block;" [routerLink]="['/view-quiz', x.key]">{{x.name}}</ion-button>
+      </ion-list>
+     
+        
+    
+    
+  </ion-card>
+</ion-content>
+<footer>
+  <ion-button expand="full" [routerLink]="['/login']">Logout</ion-button>
+</footer>
